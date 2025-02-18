@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model
+  href="http://download.ros.org/schema/package_format2.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>fmt_vendor</name>
+  <version>0.1.0</version>
+  <description>
+    Wrapper around fmt, providing a dependency on fmt if available or building it locally if not found.
+  </description>
+  <maintainer email="Andrei.Kholodnyi@gmail.com">Andrei Kholodnyi</maintainer>
+  <license>Apache License 2.0</license> <!-- the contents of this package are Apache 2.0 -->
+  <license>MIT</license> <!-- fmt library uses the MIT license -->
+
+  <url type="repository">https://github.com/fmtlib/fmt</url>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>git</buildtool_depend>
+
+  <!-- fmt may have dependencies like cxx_standard -->
+  <depend>libfmt-dev</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
